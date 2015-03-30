@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t zetta-device-data-worker .
+docker build -t zetta/zetta-device-data-worker .
