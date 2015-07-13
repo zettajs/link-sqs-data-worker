@@ -15,7 +15,16 @@ var maps = {
     return msg;
   },
   usage: function(msg) {
-    msg.tenant = msg.tenant || 'default';
+    if (msg.hasOwnProperty('headers')) {
+      msg.tenant = msg.headers['x-apigee-iot-tenant-id'] || 'default';
+      ['connection', 'sec-websocket-version', 'upgrade', 'sec-websocket-key', 'authorization', 'host'].forEach(function(k) {
+        delete msg.headers[k];
+      });
+      
+    } else {
+      msg.tenant = 'default';
+    }
+    
     msg.timestamp = msg.upload;
     delete msg.upload;
     return msg;
