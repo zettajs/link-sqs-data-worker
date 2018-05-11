@@ -15,4 +15,5 @@
 # limitations under the License.
 
 #!/bin/bash
-docker build -t zetta/zetta-device-data-worker .
+set -x
+cd git/zetta-sqs-data-worker

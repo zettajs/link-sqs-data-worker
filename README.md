@@ -1,5 +1,7 @@
 # Process Data in SQS
 
+Processes zetta usage and device data from AWS SQS and writes them to
+AWS S3.
 
 ## Usage
 
