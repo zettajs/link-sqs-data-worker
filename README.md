@@ -8,3 +8,7 @@ AWS S3.
 ```
 node worker.js [device|usage] [queue url] [s3 bucket]
 ```
+
+## Disclaimer
+
+This is not an officially supported Google product.
